@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Ferrari Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<header class="topbar">
+    <div>
+        <h1>Bar Ferrari <span>2.0</span></h1>
+        <p>Menu</p>
+    </div>
+</header>
+
+<nav class="tabs">
+    <button data-cat="Classics">Classici</button>
+    <button data-cat="Cocktails" class="active">Cocktails</button>
+    <button data-cat="Wines">Vini</button>
+    <button data-cat="Beers">Birre</button>
+    <button data-cat="Spritz">Spritz</button>
+    <button data-cat="Analcolici">Analcolici</button>
+    <button data-cat="Caffetteria">Caffetteria</button>
+    <button data-cat="Pasticceria">Pasticceria</button>
+    <button data-cat="Food">La Cucina</button>
+
+</nav>
+
+
+<!-- DRINK DEL MESE -->
+<div class="featured-box">
+
+    <div class="featured-content">
+
+        <span class="featured-badge">⭐ Drink del Mese</span>
+
+        <h2>Tramonto al Mare</h2>
+
+        <p>
+            Il nostro cocktail signature più amato. Un'esplosione di colori che ricorda
+            un tramonto estivo: granatina, succo d'arancia, Blue Curaçao e vodka premium.
+        </p>
+
+        <div class="featured-tags">
+            <span>🍊 Agrumi</span>
+            <span>❄ Rinfrescante</span>
+            <span>🔥 Più ordinato</span>
+        </div>
+
+        <div class="featured-bottom">
+            <strong>€8.00</strong>
+            <button class="featured-btn">+ Aggiungi all'Ordine</button>
+        </div>
+
+    </div>
+
+    <div class="featured-image"></div>
+
+</div>
+
+<main>
+    <div id="drinks-container" class="grid"></div>
+</main>
+
+<button id="view-cart" class="floating-btn">
+    🛒 Order
+    <span id="cart-count">0</span>
+</button>
+
+<!-- CART -->
+<div id="cart-panel">
+
+    <div class="cart-header">
+        <h3>Il tuo ordine</h3>
+        <button id="close-cart">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <div class="total">
+            <span>Total</span>
+            <strong id="cart-total">€0.00</strong>
+        </div>
+
+        <button id="send-order" class="send-btn">
+             Send to Bartender
+        </button>
+    </div>
+
+</div>
+
+<!-- CONFERMA -->
+<div id="overlay">
+    <div class="confirm-box">
+
+        <div class="confirm-icon">✔</div>
+
+        <h2>Order Sent</h2>
+
+        <div class="confirm-info">
+            <div>Order # <span id="order-id"></span></div>
+            <div>Table <span id="table-id"></span></div>
+        </div>
+
+        <button id="continue-btn" class="confirm-btn">
+            Continue
+        </button>
+
+    </div>
+</div>
+
+<script src="drinks.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
